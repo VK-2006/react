@@ -1,0 +1,119 @@
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.hdiv{
+    height: 400px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    align-content: center;
+    border-radius: 50px;
+    animation: rot;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: background 1s ease;
+    cursor: none;
+}
+.hai {
+    position: relative;
+    color: aliceblue;
+    font-size: 250px;
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hai::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, yellow, red, brown, aqua, pink);
+    background-size: 100% 300%;
+    background-repeat: repeat-y;
+    animation: hai-bg-move 4s linear infinite;
+}
+
+@keyframes hai-bg-move {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+button:hover{
+    background: linear-gradient(90deg,rgb(0, 255, 217),rgb(255, 221, 0));
+    background-clip: text;
+    transition: color 2s ease;
+    -webkit-text-fill-color: transparent;
+}
+p:hover{
+    border-bottom: 4px black solid;
+    transition: 2s ease-in-out;
+}
+.adder{
+    height: 120px;
+    width: 200px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 100px;
+    position: absolute;
+    font-family: sans-serif;
+    left: 45%;
+    border: none;
+    color: white;
+    background: linear-gradient(20deg,rgb(44, 209, 242),rgb(252, 43, 43));
+}
+@media (max-width: 1200px) {
+  .hai {
+    font-size: 150px;
+  }
+  .adder {
+    font-size: 60px;
+    height: 90px;
+    width: 150px;
+    left: 40%;
+  }
+  .hdiv {
+    height: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hai {
+    font-size: 80px;
+  }
+  .adder {
+    font-size: 36px;
+    height: 60px;
+    width: 100px;
+    left: 30%;
+  }
+  .hdiv {
+    height: 180px;
+    width: 95%;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hai {
+    font-size: 40px;
+  }
+  .adder {
+    font-size: 20px;
+    height: 40px;
+    width: 70px;
+    left: 10%;
+  }
+  .hdiv {
+    height: 100px;
+    width: 100%;
+    border-radius: 15px;
+    padding-top: 10px;
+  }
+}
